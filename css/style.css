@@ -1,0 +1,909 @@
+/**/
+
+body, h1, h2, h3, h4, p,ul,img{
+    padding: 0px;
+    margin: 0px; 
+    font-family: Georgia, serif;
+}
+
+header{
+  
+    max-width:1600px;
+    margin: 0 auto;
+    height:500px;
+    background-image: url('../img/imgBack2.jpg') ; 
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    padding: 0px auto;
+  
+}
+.menu{
+
+    max-width: 960px;
+    margin: 0 auto ;
+
+ }
+
+ .menu h2{
+    font-weight: bold;
+    font-size: 2.5em;
+    padding-top: 20px;
+    display: block;
+    float: left;
+ }
+ .menu h2:hover{
+    transform:rotate(5deg);
+}
+.menu h2 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.menu .navegacao{
+    margin: auto 5px;
+    float: right;
+  
+ }
+ .menu .navegacao ul li{
+    display: inline-block;
+   
+}
+
+.menu .navegacao ul li a{
+    /*  display: block;*/
+      text-decoration:none ;
+      padding: 20px 1px;
+      color: white;
+      font-size: 1.4em;
+      font-weight: bold;
+      text-transform: uppercase;  
+}
+
+.menu .navegacao ul li a:hover{
+    color:red;
+    transform:rotate(3deg);
+  
+
+}
+
+.menu ::after, .menu::before{
+       
+    content: '';
+    display: table; 
+    clear: both;
+     
+}
+
+/*responsive menu*/
+@media screen  and (max-width: 480px) {
+   
+    header{
+  
+        max-width:600px;
+     
+        height:350px;
+    }
+
+    .menu{
+
+        max-width: 480px;
+      
+        position: relative;
+     }
+   
+    .menu h2{
+      
+        font-size: 3em;
+        padding-top: 80px;
+        display: block;
+       
+        text-align: left;   
+    }
+    .menu2{
+        float: right;
+        margin: 30px 30px;
+    }
+    .amburguer{
+        position: relative;
+        height: 3px;
+        width: 40px;
+        background-color: white;
+        transition: all 0.4s ease-in-out;
+      
+  
+    }
+    .amburguer::before{
+       
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        transition: all 0.4s ease-in-out;
+
+    }
+    .amburguer::after{
+       
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        transition: all 0.4s ease-in-out;
+      
+
+    }
+
+    
+    .menu .navegacao{
+       /*display: none;*/
+       position: absolute;
+       margin: 20px auto;
+       height: 180px;
+       background-color: blue;
+       border-radius: 4px;
+       transform: translateX(-300px); /*valor fica bom pra ficar fora */
+
+       transition: all 0.3s ease-in-out;
+    
+    }
+
+    .menu .navegacao-open{
+   
+       transform: translateX(0px);
+     
+
+
+          /*5px fica certo*/
+     }
+     .menu2 .close-btn{
+       
+        transform: rotateZ(45deg);
+        transition: all 0.4s ease-in-out;
+    }
+
+    .close-btn::before, .close-btn::after{
+        top:0;
+        transform: rotate(90deg);
+        transition: all 0.4s ease-in-out;
+    }
+    .menu .navegacao ul li{
+        display:block;
+    
+    }
+
+    .menu .navegacao ul li a{
+       
+        padding: 20px 1px;
+
+    }
+  
+}
+
+@media screen  and (max-width: 768px) {
+
+.menu{
+
+    max-width: 768px;
+    margin: 0 auto ;
+
+ }
+
+ .menu h2{
+    font-weight: bold;
+    font-size: 1.8em;
+    padding-top: 10px;
+    display: block;
+    float: left;
+ }
+
+
+.menu .navegacao{
+    margin: auto 2px;
+  
+  
+ }
+
+
+.menu .navegacao ul li a{
+   
+   
+      padding: 10px 1px;
+      
+      font-size: 1.2em;
+ 
+    
+}
+
+}
+/*fim menu*/
+/*
+.gosth{
+    width: 100%;
+    height: 150px;
+    color: blue;
+}*/
+main{
+    
+    max-width:1200px;
+    margin:5px auto;
+   
+    background-color:#4682a4;
+  
+    border-radius: 3px;
+}
+main h1{
+    font-family:'Courier, monospace';
+    margin: 2px auto;
+    font-size: 3.5em;
+    text-align: center;
+    color: white;
+}
+
+main h3{
+    font-family:'Courier, monospace';
+    margin: auto;
+    font-size: 2.5em;
+    text-align: center;
+    color: white;
+}
+section > h2{
+    text-align: center;
+    font-size: 2em;
+    background-color:#4682a4;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+
+/*responsivo*/
+
+@media screen  and (max-width: 480px) {
+    main{
+    
+        max-width:480px;
+        margin:4px auto;
+    }
+    main h1{
+        font-family:'Courier, monospace';
+        margin: 2px auto;
+        font-size: 1.8em;
+        text-align: center;
+        color: white;
+    }
+    
+    main h3{
+        font-family:'Courier, monospace';
+        margin: auto;
+        font-size: 1.6em;
+        text-align: center;
+        color: white;
+    }
+
+}
+
+/*responsive ipad*/
+@media screen and (max-width: 768px) {
+  main{  
+        max-width:768px;
+ }
+ main h1{ 
+    font-size: 3em;   
+ }
+ main h3{
+    margin: auto;
+    font-size: 2em;
+ }
+ section > h2{
+   
+    font-size: 1.6em;
+
+    margin: 5px;
+}
+
+}
+
+/*-----------sobre nos -----------------*/
+.sobre-nos{
+    max-width: 960px;
+    margin: 15px auto;   
+}
+
+/*paragrafos*/
+
+.sobre-nos p:nth-child(n){
+    text-align: center;
+    color:#485050;
+    max-width: 700px;
+    line-height: 1.30em;
+    margin:10px auto;
+}
+.sobre-nos p:nth-child(1){
+
+  font-size: 1.6em;
+
+}
+
+.sobre-nos p:nth-child(2){
+ 
+    font-size: 1.4em;
+    margin:15px auto;
+}
+
+.sobre-nos p:nth-child(3){
+
+    font-size: 1.3em;
+  
+}
+/*
+.sobre-nos p:nth-child(4){
+
+    line-height: 1.34em;
+    font-size: 1.2em;
+    margin:20px auto;
+}*/
+
+.sobre-nos p:nth-child(4){
+  font-family: 'Birthstone', cursive;
+
+  font-size: 3em;
+  
+}
+
+
+@media screen  and (max-width: 480px) {
+    .sobre-nos{
+        max-width:480px;
+        margin:10px auto; 
+    }
+    
+    /*paragrafos*/
+    
+    .sobre-nos p:nth-child(n){
+       
+        max-width: 460px;
+        line-height: 1em;
+        margin:20px auto;
+        text-align:center;
+    }
+    .sobre-nos p:nth-child(1){
+    
+      font-size: 1.6em;
+      max-width: 460px;
+    
+    }
+    
+    .sobre-nos p:nth-child(2){
+     
+        font-size: 1.4em;
+        max-width: 460px;
+    }
+    
+    .sobre-nos p:nth-child(3){
+    
+        max-width: 460px;
+      
+    }
+ 
+    .sobre-nos p:nth-child(4){
+    
+    
+        max-width: 460px;
+      
+    }
+    
+}
+
+/*responsive ipad sobre nós*/
+@media screen and (max-width: 768px) {
+    .sobre-nos{
+        max-width: 768px;
+        margin: 10px auto;   
+    }
+
+}
+
+/*---------------------------servicos------------------------*/
+
+.servicos{
+    
+    margin-top: 30px;
+}
+/*
+.menu .navegacao{
+    display: none;não tem esse
+    position: absolute;
+    margin: 10px auto;
+    height: 180px;
+    background-color: blue;
+    border-radius: 4px;
+    transform: translateX(-300px); /*valor fica bom pra ficar fora 
+
+    transition: all 0.4s ease-in-out;
+ 
+ }*/
+
+.conteiner{
+    max-width: 960px;
+    margin: 0px auto;  
+}
+.area1{
+    float:left;
+   transform: translateX(-1400px);
+}
+
+.area2{
+    float: right;
+    transform: translateX(-1400px); /*valor fica bom pra ficar fora */
+}
+
+
+.showAreas{
+    transform: translateX(0px);
+    transition: all 2s ease-in-out;
+}
+
+
+.area1, .area2{
+
+    max-width: 464px;
+    margin:5px 4px;
+}
+
+.conteiner:nth-child(even){
+    background-color:#E0EEE0;
+    border-radius: 4px;
+}
+.conteiner img{
+    margin:auto 200px;/*tamanho do container -tamanho Imagem / 2= tamanho pra ficar no centro*/
+}
+
+.conteiner h2,h4{
+    text-align: center;
+    margin-top: 2px ;
+    margin-bottom: 2px ;
+}
+.conteiner h2{
+    font-size: 1.4em;
+    color: #222222; 
+}
+
+.conteiner h4{
+    font-size: 1.2em;
+    color: #404040;
+}
+.conteiner p{
+    text-align: justify;
+    color: #404040;
+    font-size: 1.1em;
+}
+.conteiner::after, .conteiner::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/*responsive mobile services*/
+@media screen  and (max-width: 480px) {
+    .conteiner{
+        max-width: 480px;
+        margin: 0px auto;  
+    }
+
+    .conteiner .area1, .conteiner .area2{
+
+        max-width: 460px;
+        margin:5px 10px;
+    }
+    
+   .conteiner .area1{
+        clear:both;
+     
+    }
+    .conteiner .area2{
+        clear:both;
+       
+    }
+
+    .conteiner:nth-child(even){
+        background-color:#E0EEE0;
+        border-radius: 4px;
+    }
+
+
+    .conteiner .area1 img, .conteiner .area2 img{
+        margin:auto 198px;/*tamanho do container -tamanho Imagem / 2= tamanho pra ficar no centro*/
+    }
+
+    .conteiner .area1 p, .conteiner .area2 p{
+        max-width: 420px;
+        text-align: center;
+        color: #404040;
+        font-size: 1.1em;
+    }
+
+    .conteiner .area1 img, .conteiner .area2 img{
+        margin:auto 155px;
+    }
+
+
+}
+
+/*responsive ipad footer*/
+@media screen and (max-width: 768px) {
+  
+   
+    .conteiner{
+        max-width: 768px;
+        margin: 0px auto;  
+    }
+
+    .area1, .area2{
+
+        max-width: 752px;
+        margin:5px 8px;
+    }
+
+    .area1, .area2{
+        clear:both;
+    }
+   
+    .conteiner:nth-child(even){
+        background-color:#E0EEE0;
+        border-radius: 4px;
+    }
+
+
+    .conteiner img{
+        margin:auto 344px;
+    }
+    
+
+}
+
+
+/*--------------------nosso pessoal---------------------------------*/
+
+
+.funcionarios{
+    max-width: 960px;
+    margin:20px auto;
+}
+
+.funcionarios .func1, .func2{
+    margin: 30px auto;
+}
+
+.funcionarios img{
+    max-width: 400px;
+}
+/*func1 e func3*/
+.func1 img, .func3 img{
+    float:left;
+    display: block;
+    margin:0 10px;
+  
+}
+
+.timeInfo1, .timeInfo2.timeInfo3 {
+    margin: 5px auto;
+}
+
+
+.funcionarios h3{
+    margin-bottom: 10px;
+    color: #222222;
+}
+
+.funcionarios p{
+    color: #404040;
+    max-width: 950px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+.func1::after, .func1::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*time 2*/
+
+.func2 img{
+    float: right;
+    display: block;
+    margin:0 10px
+}
+
+
+.func2::after, .func2::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/*time 3*/
+
+.func3::after, .func3::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+@media screen  and (max-width: 480px) {
+    
+    section h2{
+       max-width: 470px;
+       text-align: center;
+    }
+    .funcionarios{
+        max-width: 480px;
+        margin:15px auto;
+    }
+    .funcionarios .func1, .func2{
+        margin: 20px auto;
+    }
+
+    /*func1 e func3*/
+    .funcionarios img{
+       max-width: 400px;
+       float: none;
+       height: 300px;
+       display: block;
+       margin:2px auto;
+       
+    }
+    
+    .funcionarios h3{
+        text-align: center;
+        max-width: 470px;
+        padding: 2px;
+    }
+
+    .funcionarios p{
+        text-align: center;
+        max-width: 470px;
+       
+        line-height: 1.2em;
+    }
+
+
+}
+/*responsive ipad*/
+@media screen and (max-width: 768px) {
+    .funcionarios{
+        max-width: 768px;
+        margin:20px 5px;
+    }
+    .funcionarios .func1, .func2{
+        margin: 40px auto;
+    }
+    .funcionarios img{
+        max-width: 300px;
+       
+        height: 350px;   
+    }
+    
+    .funcionarios h2{
+        font-size: 2em;
+    }
+    .funcionarios h3{
+        font-size: 1.6em;
+    }
+    
+    .funcionarios p{
+        font-size: 1.2em;
+        line-height: 1em;
+        max-width: auto;
+    }
+}
+
+
+/*----------------------contato------------------------*/
+
+.section-contato{
+    margin: 10px auto;
+  
+}
+.ondeEstamos{
+    max-width: 960px;
+    margin: 0px auto;
+}
+
+
+iframe{
+    display: block;
+    float: left;
+    width:430px;
+    height:330px;
+    
+}
+
+.contatosTexto{
+    float: right;
+    margin: 55px 2px;
+}
+.contatosTexto ul{
+   list-style: none;
+}
+
+.ondeEstamos p{
+   padding: 10px 2px;
+   font-size: 1em;
+   font-weight: bold;
+}
+
+.ondeEstamos::after,.ondeEstamos::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+button img{
+    max-width: 50px;
+}
+
+.btn-topo{
+    position: fixed;
+    bottom: 80px;
+    right: 200px;
+    border-radius: 10px;
+    display: none;
+    border: solid 4px  #4682a4;
+}
+
+.mostrarButton{
+    position: fixed;
+    bottom: 80px;
+    right: 200px;
+    border-radius: 10px;
+    border: solid 4px  #4682a4;
+    cursor: pointer;
+}
+
+@media screen  and (max-width: 480px) {
+    .section-contato h{
+        max-width: 470px;
+        text-align: center;
+    }
+
+    .ondeEstamos{
+        max-width: 480px;
+        margin: 0px auto;
+    }
+    .ondeEstamos iframe{
+        max-width: 380px;
+        height: 300px;
+        margin:10px auto;
+        float: none;
+        clear: both;
+    }
+
+    .contatosTexto{
+        float: none;
+        margin: 15px auto;
+        max-width: 412px;
+    }
+
+    .contatosTexto ul li:nth-child(1){
+     
+        margin-left: -10px;
+     
+     }
+
+    .contatosTexto ul li:nth-child(2){
+     
+       margin-left: -15px;
+      
+    }
+
+    .contatosTexto ul li:nth-child(3){
+     
+        margin-left: -35px;
+        
+      
+     }
+
+    .contatosTexto ul li:nth-child(4){
+      
+        
+        margin-left: -40px;
+      
+     }
+
+}
+
+/*responsive ipad*/
+@media screen and (max-width: 768px) {
+      
+    .ondeEstamos{
+        max-width: 768px;
+        margin: 0px auto;
+    }
+    .ondeEstamos iframe{
+        max-width: 500px;
+        height: 300px;
+        margin:10px auto;
+        float: none;
+        clear: both;
+    }
+    .contatosTexto{
+        float: none;
+        margin: 15px auto;
+        max-width: 412px;
+    }
+
+    .contatosTexto ul li:nth-child(1){
+     
+        margin-left: 5px;
+     
+     }
+
+    .contatosTexto ul li:nth-child(2){
+     
+       margin-left: 40px;
+      
+    }
+
+    .contatosTexto ul li:nth-child(3){
+     
+        margin-left: 50px;
+        
+      
+     }
+
+    .contatosTexto ul li:nth-child(4){
+      
+        
+        margin-left: 65px;
+      
+     }
+    
+}
+@media screen  and (max-width: 480px) {
+    button img{
+        max-width: 40px;
+    }
+
+    .mostrarButton{
+        position: fixed;
+        bottom: 80px;
+        right: 40px;
+        border-radius: 10px;
+        border: solid 4px  #4682a4;
+        cursor: pointer;
+    }
+   
+   
+}
+footer{
+  
+    background-color:#4682a4;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+
+}
+
+/*responsive mobile footer*/
+@media screen  and (max-width: 480px) {
+   footer{
+    font-size: 1em;
+   }
+}
+
+/*responsive ipad footer*/
+@media screen and (max-width: 768px) {
+    footer{
+        font-size: 1em;
+       }
+}
